@@ -1,0 +1,8 @@
+services:
+  nginx:
+    restart: unless-stopped
+    build:
+      context: .
+    image: nginx
+    ports:
+      - 1122:80
