@@ -22,4 +22,4 @@ jobs:
             git pull origin master --force
             cp config/default.conf /etc/nginx/sites-available/
             nginx -t
-            systemctl reload nginx
+            nginx -s reload
