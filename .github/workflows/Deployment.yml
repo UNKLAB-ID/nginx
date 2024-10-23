@@ -20,6 +20,6 @@ jobs:
           script: |
             cd ${{ secrets.REPOSITORY_LOCATION }}
             git pull origin master --force
-            cp config/default.conf /etc/nginx/sites-available/
+            cp config/default.conf /etc/nginx/sites-available/unklab
             nginx -t
             nginx -s reload
