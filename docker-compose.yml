@@ -1,8 +1,9 @@
 services:
   nginx:
-    restart: unless-stopped
+    container_name: nginx
     build:
       context: .
     image: nginx
+    restart: unless-stopped
     ports:
       - 80:80
