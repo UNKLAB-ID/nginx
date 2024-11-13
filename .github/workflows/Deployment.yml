@@ -20,6 +20,4 @@ jobs:
           script: |
             cd ${{ secrets.REPOSITORY_LOCATION }}
             git pull origin master --force
-            cp config/default.conf /etc/nginx/sites-available/unklab
-            nginx -t
-            nginx -s reload
+            docker compose up --build -d
